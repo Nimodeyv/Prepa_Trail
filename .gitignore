@@ -1,11 +1,8 @@
-data/pred
-data/coureurs/*.dat
-data/ppassages
-data/coureurs
-data/gpx
+app/data/pred
+app/data/coureurs/*.dat
 
 # Byte-compiled / optimized / DLL files
-__pycache__/
+app/dep/__pycache__/
 *.py[cod]
 *$py.class
 
