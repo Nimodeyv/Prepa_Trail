@@ -1,6 +1,5 @@
 
 
-from geopy import distance
 import pandas as pd
 import datetime
 from math import sqrt
