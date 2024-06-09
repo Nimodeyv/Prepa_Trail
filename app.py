@@ -71,7 +71,7 @@ def main():
     with st.sidebar:
         button_clicked = st.button("Prediction")
 
-    st.image('./data/logo/logo_transparent.png', width = 100 )
+        st.image('./data/logo/logo_transparent.png', width = 100 )
 
         
     if button_clicked:
