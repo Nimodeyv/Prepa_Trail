@@ -1,0 +1,8 @@
+Trail;Date;Suivi;Heure_depart;Lien_URL;Fichier_parcours_gpx;Vit_plat_km/h;Vit_den+_m/h;Csv_file;Date_dt;Modele_prediction;Ralent_h/km;Ralent_sec/km;Fit_intercept
+2024_ARCON;2024-04-28;gpx;09:24:25;;Trail 14 km-Arcon.gpx;9.17;5252.0;;2024-04-28;gpx;;-0.1;1.69
+2024_BESANCON;2024-04-14;gpx;07:56:09;;Trail 14 km-Besancon.gpx;9.98;6955.0;;2024-04-14;gpx;;-0.05;1.54
+2024_LACHAUX;2024-04-21;gpx;08:04:37;;Trail 16 km-La Chaux.gpx;8.69;3538.0;;2024-04-21;gpx;;-0.03;1.23
+2020_LONGEVILLE;2020-08-02;gpx;08:54:33;;Trail 22 km-La Longeville.gpx;10.86;4563.0;;2020-08-02;gpx;;-0.0;1.64
+2024_TDF;2024-05-11;gpx;09:30:00;;TDF 20 km-640 m.gpx;9.74;4823.0;;2024-05-11;gpx;;0.04;1.07
+ALL;;All;;;;9.9;4929.0;;;gpx;;0.0;1.21
+PROFIL;;PROFIL;;;;9.49;4397.0;;;gpx;;0.0;1.06

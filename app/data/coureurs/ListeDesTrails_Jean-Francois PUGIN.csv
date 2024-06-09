@@ -1,0 +1,8 @@
+Trail;Date;Suivi;Heure_depart;Lien_URL;Fichier_parcours_gpx;Vit_plat_km/h;Vit_den+_m/h;Csv_file;Date_dt;Modele_prediction;Fit_intercept;Ralent_sec/km
+2022TDS;2022-08-23;livetrail;00:00:00;https://livetrail.net/histo/utmb_2022/parcours.php?course=tds;tracedetrail_183308.gpx;15.38;1218.0;2022-08-23_TDS®_147.6km.csv;2022-08-23;points_passages;0.0;11.43
+2022MaXiRace;2022-05-28;livetrail;02:50:00;https://livetrail.net/histo/maxirace_2022/;tracedetrail_168303.gpx;13.91;2326.0;2022-05-28_MaXi Race_86.6km.csv;2022-05-28;points_passages;0.0;7.84
+2024UTMB;2023-09-01;A prédire;17:59:00;https://livetrail.net/histo/utmb_2023;utmb-2023.gpx;;;2023-09-01_UTMB®_173.5km.csv;2023-09-01;points_passages;;
+2024LAVAREDO;2024-06-28;A prédire;23:00:00;https://livetrail.net/histo/lavaredo_2024;lavaredo-ultra-trail-2021-120k.gpx;;;2023-06-23_LAVAREDO 120K_122.2km.csv;2024-06-28;points_passages;;
+2023WILD;2023-09-15;livetrail;05:01:00;https://livetrail.net/histo/wildstrubel_2023;tracedetrail_224737.gpx;14.65;1763.0;2023-09-15_Wild 110k_113.7km.csv;2023-09-15;points_passages;0.0;12.89
+ALL;NA;All;NA;;;15.45;1446.0;;;points_passages;0.0;12.08
+PROFIL;NA;PROFIL;NA;;;13.01;1713.0;;;points_passages;0.0;5.12

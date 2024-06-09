@@ -753,6 +753,8 @@ class Trail:
         map.save(f'./data/pred/{self.nom_id}.html')
         display(map)    
 
+        return map
+
         ################################################################################################
 
       
