@@ -749,8 +749,8 @@ class Trail:
         '''   
 
         map.get_root().html.add_child(folium.Element(titre))
-        map.save(f'./data/pred/{self.nom_id}.html')
-        display(map)    
+        # map.save(f'./data/pred/{self.nom_id}.html')
+        # display(map)    
 
         return map
 

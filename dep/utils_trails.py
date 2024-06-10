@@ -65,7 +65,9 @@ def plot_data(T, i, df,axeX, axeY1, axeY2, df_eau, df_glucide,  conso_eau, conso
 
             plt.show()
 
-            fig.savefig(f'./data/pred/{T.nom_id}_{vit_plat}_{vit_Dplus}_{round(ralentissement,3)}_{fit_intercept}.png')
+            # fig.savefig(f'./data/pred/{T.nom_id}_{vit_plat}_{vit_Dplus}_{round(ralentissement,3)}_{fit_intercept}.png')
+
+            return fig
 
 ################################################################################################
 

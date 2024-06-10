@@ -15,7 +15,7 @@ from streamlit_folium import st_folium, folium_static
 
 from dep.coureur import Coureur
 from dep.trails import Trail
-from dep.utils_trails import pred, add_table_to_map, plot_data, parcours_plot
+from dep.utils_trails import pred, plot_data
 
 
 def main():
@@ -92,20 +92,23 @@ def main():
         
         
         # Display the plots in the main window
-        plot_data(T=T, i=i, df= df_p, axeX='Cumul_Dist_km', axeY1='H_reel_h', axeY2='Pred_Cum_T_Rom', 
+        fig = plot_data(T=T, i=i, df= df_p, axeX='Cumul_Dist_km', axeY1='H_reel_h', axeY2='Pred_Cum_T_Rom', 
                   df_eau=df_eau, df_glucide=df_glucide, conso_eau=coureur_choisi.conso_eau, conso_glucide=coureur_choisi.conso_glucide,
                   vit_plat=vitesse_plat, vit_Dplus=vitesse_Dplus, ralentissement=Ralentissement, fit_intercept=fit_intercept,
                   )
-        st.image(f'./data/pred/{T.nom_id}_{vitesse_plat}_{vitesse_Dplus}_{round(Ralentissement,3)}_{fit_intercept}.png', width=1000)
         
+        st.pyplot(fig, use_container_width=False)
+        # st.image(f'./data/pred/{T.nom_id}_{vitesse_plat}_{vitesse_Dplus}_{round(Ralentissement,3)}_{fit_intercept}.png', width=1000)
+        
+    
         # Merge column "Eau_à_emporter" of df_eau with df_p on 'Point_passage'
-        df_p = pd.merge(df_p, df_eau[['Point_passage', 'Eau_à_emporter']], on='Point_passage', how='left')
-        df_p = pd.merge(df_p, df_glucide[['Point_passage', 'Glucides_à_emporter']], on='Point_passage', how='left')
+        df_p = df_p.merge(df_eau[['Point_passage', 'Cumul_Dist_km', 'Eau_à_emporter']], on=['Point_passage','Cumul_Dist_km'], how='left')
+        df_p = df_p.merge(df_glucide[['Point_passage', 'Cumul_Dist_km', 'Glucides_à_emporter']], on=['Point_passage', 'Cumul_Dist_km'], how='left')
 
 
         st.dataframe(df_p[['Point_passage', 'Cumul_Dist_km','Cumul_D+_m','Pred_Cum_T_Rom',
                     'Heure_predite', 'Eau_à_emporter', 'Glucides_à_emporter']], 
-                    #width=1500, height=1500,
+                    use_container_width=False, #width=1000, height=900,
                     )
 
         
