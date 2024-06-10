@@ -1,7 +1,0 @@
-Trail,Date,Suivi,Heure_depart,Lien_URL,Fichier_parcours_gpx,Vit_plat_km/h,Vit_den+_m/h,Fit_interecept,Csv_file,Date_dt,Ralent_h/km,Fit_intercept,Ralent_sec/km
-2022TDS,2022-08-23,livetrail,00:00:00,https://livetrail.net/histo/utmb_2022/parcours.php?course=tds,tracedetrail_183308.gpx,15.38,1218.0,,2022-08-23_TDS®_147.6km.csv,2022-08-23,,0.0,11.43
-2022MaXiRace,2022-05-28,livetrail,02:50:00,https://livetrail.net/histo/maxirace_2022/,tracedetrail_168303.gpx,13.91,2326.0,,2022-05-28_MaXi Race_86.6km.csv,2022-05-28,,0.0,7.84
-2023UTMB,2023-09-01,A prédire,17:59:00,https://livetrail.net/histo/utmb_2023,utmb-2023.gpx,,,,2023-09-01_UTMB®_173.5km.csv,2023-09-01,,,
-2023WILD,2023-09-15,livetrail,05:01:00,https://livetrail.net/histo/wildstrubel_2023,tracedetrail_224737.gpx,14.65,1763.0,,2023-09-15_Wild 110k_113.7km.csv,2023-09-15,,0.0,12.89
-ALL,NA,All,NA,,,15.45,1446.0,,,,,0.0,12.08
-PROFIL,NA,PROFIL,NA,,,15.45,1446.0,,,,,0.0,12.08
