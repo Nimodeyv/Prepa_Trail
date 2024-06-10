@@ -1,5 +1,5 @@
 data/pred
-data/coureurs/*.dat
+
 
 # Byte-compiled / optimized / DLL files
 app/dep/__pycache__/
