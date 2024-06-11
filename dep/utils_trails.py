@@ -13,14 +13,15 @@ def plot_data(T, i, df,axeX, axeY1, axeY2, df_eau, df_glucide,  conso_eau, conso
               vit_plat,vit_Dplus,ralentissement, fit_intercept):
 
             fig, ax = plt.subplots(4,1, figsize=(15,12))
-
+            T.df_parcours['Altitude_m'] = T.df_parcours['Altitude_m'].astype(float)
+            T.df_parcours[axeX] = T.df_parcours[axeX].astype(float)
             sns.lineplot(data=T.df_parcours, x=axeX, y='Altitude_m', ax=ax[0], color='black')
             ax[0].fill_between(T.df_parcours[axeX], T.df_parcours['Altitude_m'], color="skyblue", alpha=0.4)
             sns.scatterplot(data=df, x=axeX, y='Altitude_m', ax=ax[0], color='red')
             # Put labels on scatterplot from df colum 'Point_passage'
             for j, txt in enumerate(df['Point_passage']):
                 ax[0].annotate(txt, (df[axeX].iloc[j], df['Altitude_m'].iloc[j]), fontsize=8)
-            ax[0].set_xticklabels([])
+            ax[0].set_xlabel('')
             ax[0].set_ylabel('Altitude (m)')
             ax[0].grid()
 
@@ -35,6 +36,7 @@ def plot_data(T, i, df,axeX, axeY1, axeY2, df_eau, df_glucide,  conso_eau, conso
                 ax[1].fill_between([df_eau.loc[j,'Cumul_Dist_km'],df_eau.loc[j+1,'Cumul_Dist_km']],
                                 [df_eau.loc[j,'Eau_à_emporter'],0], color="skyblue", alpha=0.4)
             ax[1].text(0, 0.1, f'Conso. eau:{conso_eau} l/h')
+            ax[0].set_xlabel('')
             ax[1].grid()
 
 
@@ -49,6 +51,7 @@ def plot_data(T, i, df,axeX, axeY1, axeY2, df_eau, df_glucide,  conso_eau, conso
                 ax[2].fill_between([df_glucide.loc[j,'Cumul_Dist_km'],df_glucide.loc[j+1,'Cumul_Dist_km']],
                                 [df_glucide.loc[j,'Glucides_à_emporter'],0], color="pink", alpha=0.4)
             ax[2].text(0, 5, f'Conso. glucides:{conso_glucide} g/h')
+            ax[0].set_xlabel('')
             ax[2].grid()
 
 
@@ -60,6 +63,7 @@ def plot_data(T, i, df,axeX, axeY1, axeY2, df_eau, df_glucide,  conso_eau, conso
                 ax[3].text(df.loc[j,axeX],df.loc[j,axeY2],f'{round(df.loc[j,axeY2],1)}h', color='blue', 
                         verticalalignment='bottom', horizontalalignment='right', fontsize=10)
             ax[3].set_ylabel('Cumulated time (s)')
+            ax[0].set_xlabel('')
             ax[3].legend()
             ax[3].grid()
 

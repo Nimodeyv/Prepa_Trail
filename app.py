@@ -49,7 +49,7 @@ def main():
 
             vitesse_plat = st.slider("Vitesse plat (km/h):", min_value=5.0, max_value=20.0, value=13.0, step=0.1)
             vitesse_Dplus = st.slider("Vitesse Dénivélé+ (m/h):", min_value=600, max_value=6000, value=1713, step=25)
-            Ralentissement = st.slider("Ralentissement (sec/km):", min_value=-20.0, max_value=5.1, value=10.0, step=0.5)
+            Ralentissement = st.slider("Ralentissement (sec/km):", min_value=-20.0, max_value=10.0, value=5.1, step=0.5)
             fit_intercept =  0 #st.slider("fit_intercept:", min_value=0.0, max_value=10.0, value=0.0, step=0.01)
 
             
@@ -61,11 +61,11 @@ def main():
         
     with st.sidebar:
         ravito = [] 
-        for i,row in T.df_ppassage.iterrows():
-            checkbox_label = st.checkbox(row['Point_passage'], 
-                                         key=f'checkbox_{i}')
+        for i in range(len(T.df_ppassage)-1):
+            checkbox_label = st.checkbox(T.df_ppassage.loc[i+1, 'Point_passage'], 
+                                         key=f'checkbox_{i+1}')
             if checkbox_label:
-                ravito.append(row['Point_passage'])
+                ravito.append(T.df_ppassage.loc[i+1,'Point_passage'])
 
 
     with st.sidebar:
